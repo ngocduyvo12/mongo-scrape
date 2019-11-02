@@ -2,6 +2,7 @@ var db = require("../models");
 var axios = require("axios");
 var cheerio = require("cheerio");
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var mongoose = require("mongoose");
 // Routes =============================================================
 module.exports = function (app) {
 
@@ -32,7 +33,6 @@ module.exports = function (app) {
             $("article h2").each(function (i, element) {
                 // Save an empty result object
                 var result = {};
-
                 // Add the text and href of every link, and save them as properties of the result object
                 result.title = $(this)
                     .children("a")
@@ -134,7 +134,6 @@ module.exports = function (app) {
     });
 
     //route for deleting a note:
-    //route for deleting an article:
     app.post("/note/delete", function (req, res) {
         db.Note.findByIdAndDelete(req.body._id)
             .then(function (dbArticle) {
@@ -142,5 +141,13 @@ module.exports = function (app) {
             }).catch(function (err) {
                 res.json(err)
             })
+    })
+
+    //route for dropping database:
+    app.get("/delete-all", function(req, res){
+        const connection = mongoose.createConnection(MONGODB_URI);
+        connection.dropDatabase().then(function(data){
+            res.end()
+        })
     })
 }

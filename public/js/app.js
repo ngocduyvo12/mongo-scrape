@@ -122,6 +122,6 @@ $("#clear-btn").on("click", function(event){
         method: "GET",
         url: "/delete-all"
     }).then(function(data){
-        
+        location.reload()
     })
 })
