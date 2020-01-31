@@ -58,7 +58,7 @@ $(".modal-btn").on("click", function (event) {
             }
         }
         var message = `<ul class="list-group">${note}</ul>`
-        console.log(note)
+        // console.log(note)
         var dialog = bootbox.prompt({
             size: "small",
             title: "What is your name?",
