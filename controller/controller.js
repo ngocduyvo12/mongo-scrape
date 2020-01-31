@@ -49,6 +49,7 @@ module.exports = function (app) {
                     })
                     .catch(function (err) {
                         // If an error occurred, log it
+                        
                         console.log(err);
                     });
             });

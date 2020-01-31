@@ -3,11 +3,9 @@
 //wire up on click btn for scrape
 $("#scrape-btn").on("click", function (event) {
     event.preventDefault();
-    console.log("clicked")
     $.get("/scrape", function (data) {
         location.reload()
     })
-
 })
 //wire up on click button for save.
 $(".save-btn").on("click", function (event) {
