@@ -104,7 +104,6 @@ $(document).on("click", ".note-delete", function() {
     var noteId = {
         _id: $(this).data("id"),
     }
-    console.log(noteId._id)
     $.ajax({
         method: "POST",
         url: "/note/delete",
