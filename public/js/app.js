@@ -89,7 +89,6 @@ $(".modal-btn").on("click", function (event) {
                         // With that done
                         .then(function (data) {
                             // Log the response
-                            // console.log(data);
                             location.reload()
                         });
                 }else{
