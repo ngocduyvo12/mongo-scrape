@@ -30,6 +30,7 @@ $(".delete-btn").on("click", function (event) {
     var articleId = {
         _id: $(this).data("value"),
     }
+    //use the POST method to call the database when delete button is clicked
     $.ajax({
         method: "POST",
         url: "/api/delete",
