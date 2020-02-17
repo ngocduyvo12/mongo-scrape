@@ -45,7 +45,7 @@ $(".modal-btn").on("click", function (event) {
     //route to call note associated with article
     event.preventDefault();
     var articleId = $(this).data("value")
-
+    //use the GET method to display article in modal
     $.ajax({
         method: "GET",
         url: "/articles/" + articleId
