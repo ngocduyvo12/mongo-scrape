@@ -2,7 +2,9 @@
 
 {{!-- use each and if to get only the saved article to show up on saved page --}}
 <div id="article-box">
+    {{!-- for each article --}}
     {{#each article}}
+    {{!-- show only article with isSaved = true --}}
     {{#if isSaved}}
     <div class="card text-center">
         <div class="card-body">
