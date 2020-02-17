@@ -2,7 +2,9 @@
 
  {{!-- Use each and unless method in handlebar to determine which article to show on the home page --}}
 <div id="article-box">
+    {{!-- for each article --}}
     {{#each article}}
+    {{!-- only display article with isSaved = false --}}
     {{#unless isSaved}}
     <div class="card text-center">
         <div class="card-body">
