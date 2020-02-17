@@ -14,6 +14,7 @@ $(".save-btn").on("click", function (event) {
         _id: $(this).data("value"),
         isSaved: true
     }
+    //call the put method using ajax when save button is clicked
     $.ajax({
         method: "PUT",
         url: "/api/save",
