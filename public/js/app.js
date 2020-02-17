@@ -118,6 +118,7 @@ $(document).on("click", ".note-delete", function() {
 //wire up on click btn for clearing articles.
 $("#clear-btn").on("click", function(event){
     event.preventDefault()
+    //use get method to call delete-all url
     $.ajax({
         method: "GET",
         url: "/delete-all"
