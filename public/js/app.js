@@ -61,6 +61,7 @@ $(".modal-btn").on("click", function (event) {
         }
         var message = `<ul class="list-group">${note}</ul>`
     
+        //uses bootbox to display saved articles
         var dialog = bootbox.prompt({
             size: "small",
             title: "What is your name?",
