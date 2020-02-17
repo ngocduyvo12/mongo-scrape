@@ -106,6 +106,7 @@ $(document).on("click", ".note-delete", function() {
     var noteId = {
         _id: $(this).data("id"),
     }
+    //use POST method to call delete url
     $.ajax({
         method: "POST",
         url: "/note/delete",
